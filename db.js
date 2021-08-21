@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
 const Admin = mongoose.mongo.Admin;
 
-const CONNECTION_URL = "mongodb+srv://simplilernapp:simplilernapp@simplilernfullstackapp.gtvf1.mongodb.net/sample_airbnb?retryWrites=true&w=majority";
-
 // connect to mongo db
-mongoose.connect(CONNECTION_URL, { 
+mongoose.connect(process.env.CONNECTION_URL, { 
   keepAlive: 1,
   useCreateIndex: true,
   useNewUrlParser: true, 
